@@ -35,6 +35,7 @@ int main(int argc, char* argv[])
 	close(fd[1]);
 	dup2(fd[0],STDIN_FILENO);
 	close(fd[0]);
+	wite(NULL);
 	execlp("wc","wc","-l",NULL);
 	exit(1);
     }
